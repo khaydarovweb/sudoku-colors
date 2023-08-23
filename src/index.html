@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+		}
+
+		body {
+			display: grid;
+			place-items: center;
+			height: 100vh;
+		}
+
+		.wrapper {
+			width: 500px;
+			height: 500px;
+			display: grid;
+			grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+			background-color: #161c24;
+			gap: 2px;
+			padding: 2px;
+		}
+
+		.board {
+			display: grid;
+			grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+			background-color: #94a3b7;
+			gap: 1px;
+		}
+
+		.cell {
+			display: grid;
+			position: relative;
+			place-items: center;
+			background-color: #fff;
+			font-size: 24px;
+			user-select: none;
+			font-weight: bold;
+			transition: 0.03s linear transform;
+			cursor: pointer;
+		}
+
+		.cell.active {
+			background-color: #c2deff;
+		}
+
+		.cell:active {
+			transform: scale(0.95);
+		}
+
+		.cell .info {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			font-size: 14px;
+			background-color: #161c24;
+			color: #fff;
+			width: max-content;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell">2</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">7</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</div>
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">3</div>
+			<div class="cell">4</div>
+			<div class="cell"></div>
+			<div class="cell">6</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</div>
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell">2</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">5</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">9</div>
+		</div>
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell">1</div>
+			<div class="cell">3</div>
+			<div class="cell">4</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">9</div>
+		</div>
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell">2</div>
+			<div class="cell"></div>
+			<div class="cell">5</div>
+			<div class="cell"></div>
+			<div class="cell">7</div>
+			<div class="cell"></div>
+			<div class="cell">6</div>
+			<div class="cell"></div>
+		</div>
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">5</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">8</div>
+			<div class="cell"></div>
+		</div>
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">4</div>
+			<div class="cell">9</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">8</div>
+			<div class="cell"></div>
+		</div>
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">7</div>
+			<div class="cell"></div>
+			<div class="cell">6</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">1</div>
+		</div>
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell">8</div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell">4</div>
+			<div class="cell"></div>
+			<div class="cell">2</div>
+			<div class="cell"></div>
+		</div>
+	</div>
+</body>
+
+</html>
